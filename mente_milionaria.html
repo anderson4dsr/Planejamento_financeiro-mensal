@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mente Milionária</title>
+	<style type="text/css">
+
+		h1{
+			font-size:Helvetica;
+			text-align: center;
+			color:#FFEC8B;
+			text-shadow: 0.2em 0.1em 0.2em black ;
+
+		}
+
+		#nome{
+			font-weight: bold;
+			color:#8B8B7A;
+			height:30px;
+			font-size: 110%;
+			position: absolute;
+			top: 50%;
+			left: 35%;
+		}
+
+		#recebimentos{
+			font-weight: bold;
+			color:#8B8B7A;
+			height:30px;
+			font-size: 110%;
+			position: absolute;
+			top: 40%;
+			left: 35%;
+		}
+
+		#dindin{
+			background-image: url('cifrao.jpg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 25%;
+		}
+
+		#botao{
+			background: #FFEC8B;
+			position: absolute;
+			top: 60%;
+			left: 46%;
+			width: 90px;
+			height: 50px;
+
+		}
+
+		#principal{
+			background-image: url('cifrao.jpg');
+
+		}
+
+	
+
+
+	</style>
+
+	
+</head>
+<body>
+
+	<div id="dindin" style="width: 700px; height: 700px;" >
+
+		<h1>Mente Milionária</h1>
+
+		<input
+			type="text"
+			placeholder= "Digite aqui seu nome"
+			id="nome" >
+
+		<input
+			type="text"
+			placeholder= "Digite seus Recebimentos"
+			id= "recebimentos">
+
+		<button id="botao" type="button" onclick="calcularPLanejamento()"> Calcular </button>
+	<div id="principal" style="width: 700px; height: 700px;" >	
+		<script>
+		function calcularPLanejamento() {
+			var valor = document.getElementById('nome').value
+			var money = document.getElementById('recebimentos').value
+
+			money = parseFloat(money)
+
+			document.write('Olá  ' + valor + '  Seus recebimentos são iguais a:  R$ '+ money + ',00<br /> <br />Vamos fazer um planejamento finaceiro!!<br /><br />Iremos retirar da sua renda:<br /> <br />10% para (INVESTIMENTOS)<br /> 5% para (EDUCAÇÃO FINANCEIRA)<br /> 10% para (DESPESAS DE LONGO PRAZO)<br /> 5% para (DOAÇÕES),<br /> 10% para (DIVERSÃO) <br />50 % para (NECESSIDADES ESPECIAIS)<br /><br />Então vamos lá!? <br /> <br />Separe os seguintes valores: <br /> <br /> INVESTIMENTOS: R$ '+ (10 * money / 100) + ' <br  />EDUCAÇÃO FINANCEIRA: R$ '+ (5 * money / 100)+ '<br />DESPESAS DE LONGO PRAZO: R$ '+(10 * money / 100)+ '<br /> DIVERSÃO: R$ '+(10 * money / 100)+ '  OBS: Esta conta deve ser zerada todo mês<br  /> DOAÇÕES: R$ ' +(5 * money / 100)+ '<br />NECESSIDADES ESPECIAIS: R$ ' +(60 * money / 100) )
+		}
+		</script>
+	</div>	
+
+
+	</div>
+
+</body>
+</html>
